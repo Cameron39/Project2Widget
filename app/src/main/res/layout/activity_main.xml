@@ -13,17 +13,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginTop="32dp"
+        android:onClick="btn1Pressed"
         android:text="Button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/btnText"
-        android:layout_width="117dp"
-        android:layout_height="16dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="135dp"
+        android:layout_height="17dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
         android:text="Button Not clicked"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.655"
@@ -44,9 +45,9 @@
         android:id="@+id/chbxText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="72dp"
+        android:layout_marginEnd="8dp"
         android:text="Not Checked"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.152"
@@ -55,45 +56,47 @@
 
     <Switch
         android:id="@+id/switch1"
-        android:layout_width="84dp"
-        android:layout_height="26dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginTop="56dp"
-        android:text="Switch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chbxText" />
-
-    <TextView
-        android:id="@+id/textSwitchStatic"
-        android:layout_width="87dp"
-        android:layout_height="27dp"
+        android:layout_width="102dp"
+        android:layout_height="25dp"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="48dp"
-        android:text="This switch is: "
+        android:layout_marginTop="24dp"
+        android:text="Switch"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chbx1" />
 
     <TextView
+        android:id="@+id/textSwitchStatic"
+        android:layout_width="96dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="32dp"
+        android:text="This switch is: "
+        app:layout_constraintStart_toEndOf="@+id/switch1"
+        app:layout_constraintTop_toBottomOf="@+id/chbxText" />
+
+    <TextView
         android:id="@+id/swtchText"
-        android:layout_width="29dp"
-        android:layout_height="27dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="26dp"
+        android:layout_height="24dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="35dp"
         android:text="off"
-        app:layout_constraintEnd_toStartOf="@+id/switch1"
-        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.138"
         app:layout_constraintStart_toEndOf="@+id/textSwitchStatic"
-        app:layout_constraintTop_toBottomOf="@+id/chbx1" />
+        app:layout_constraintTop_toBottomOf="@+id/chbxText" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="117dp"
         android:layout_height="96dp"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/skBr1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textSwitchStatic">
+        app:layout_constraintTop_toBottomOf="@+id/switch1">
 
         <RadioButton
             android:id="@+id/rdB1"
@@ -125,24 +128,24 @@
 
     <TextView
         android:id="@+id/rdBText"
-        android:layout_width="96dp"
-        android:layout_height="18dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="154dp"
+        android:layout_height="16dp"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp"
         android:text="None Selected"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/radioGroup"
-        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+        app:layout_constraintTop_toBottomOf="@+id/textSwitchStatic" />
 
     <SeekBar
         android:id="@+id/skBr1"
         android:layout_width="256dp"
         android:layout_height="25dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/skBrText" />
@@ -151,50 +154,58 @@
         android:id="@+id/skBrText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="148dp"
         android:layout_marginTop="40dp"
+        android:layout_marginEnd="148dp"
         android:text="0%"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rdBText" />
 
-    <TextView
+    <EditText
         android:id="@+id/txtVInput"
-        android:layout_width="92dp"
-        android:layout_height="22dp"
+        android:layout_width="129dp"
+        android:layout_height="36dp"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="24dp"
-        android:text="Input here"
+        android:layout_marginTop="16dp"
+        android:autoText="true"
+        android:inputType="text"
+        android:paddingTop="5dp"
+        android:textAlignment="gravity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/skBr1" />
 
     <TextView
         android:id="@+id/txtVOutput"
-        android:layout_width="94dp"
-        android:layout_height="21dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="132dp"
+        android:layout_height="26dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="20dp"
-        android:text="Input Value Here"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Future Value"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btlLblUpdate"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtVInput"
-        app:layout_constraintVertical_bias="0.384" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btlLblUpdate"
         android:layout_width="128dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="btnValuePressed"
         android:text="Update Label"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/txtVInput"
         app:layout_constraintTop_toBottomOf="@+id/skBr1"
-        app:layout_constraintVertical_bias="0.409" />
+        app:layout_constraintVertical_bias="0.406"
+        tools:onClick="btnValuePressed" />
 
 
 </android.support.constraint.ConstraintLayout>
